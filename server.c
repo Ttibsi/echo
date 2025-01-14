@@ -21,14 +21,17 @@ int main() {
 
         recv(client_fd, buffer, 256, 0);
         printf("%s", buffer);
-        close(client_fd);
+        send(client_fd, buffer, 256, 0);
 
         if (strncmp(buffer, "quit", 4) == 0) {
+            send(client_fd, "Goodbye...\n", 11, 0);
             break;
         }
+
+        close(client_fd);
     }
 
-    printf("Goodbye\n");
+    printf("Goodbye...\n");
     close(s);
     return 0;
 }

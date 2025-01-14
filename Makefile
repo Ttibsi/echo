@@ -1,6 +1,7 @@
-All:
+All: c asm
+
+asm:
 	~/.opt/fasm/fasm echo.asm
-	./echo
 
 c:
 	clang server.c -o server
