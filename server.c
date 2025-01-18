@@ -25,10 +25,11 @@ int main() {
 
         if (strncmp(buffer, "quit", 4) == 0) {
             send(client_fd, "Goodbye...\n", 11, 0);
+            close(client_fd);
             break;
+        } else {
+            close(client_fd);
         }
-
-        close(client_fd);
     }
 
     printf("Goodbye...\n");

@@ -1,5 +1,3 @@
-All: c asm
-
 asm:
 	~/.opt/fasm/fasm echo.asm
 
