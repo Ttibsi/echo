@@ -1,5 +1,5 @@
 # echo
-A simple echo server implemented in both C and assembly (latter in progress)
+A simple echo server implemented in both C and assembly
 
 A Makefile is provided to wrap compiler commands. Clang is required for the C
 implementation, and [fasm](https://flatassembler.net/) is required for the
